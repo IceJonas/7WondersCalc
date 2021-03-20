@@ -1,26 +1,44 @@
 $(document).ready(function() {
+    var users = [];
+    var count1 = 1;
+
     $("#btnAdd").click(function() {
-        var tempArr = [$("#numIn1").val(), $("#numIn2").val(), $("#numIn3").val(), $("#numIn4").val(), $("#numIn5").val(), $("#numIn6").val(), $("#numIn7").val(), $("#numIn1").val()];
-        var name = $("#nameIn").val();
+        var tempArr = [$("#inpNum1").val(), $("#inpNum2").val(), $("#inpNum3").val(), $("#inpNum4").val(), $("#inpNum5").val(), $("#inpNum6").val(), $("#inpNum7").val(), $("#inpNum8").val()];
+        var name = $("#inpName").val();
         var temp = 0;
         for (var i = 0; i < tempArr.length; i++) {
-            temp = temp + parseInt(tempArr[i]);
+            temp = temp + Number(tempArr[i]);
         }
+        var user = {
+            nafn: name,
+            stig: temp
+        }
+        users.push(user);
 
-        $("#testLabel").append(" " + name + " " + temp);
-
-        $(document).on('dblclick', 'li', function() {
-            $(this).fadeOut('slow');
-        });
-
+        // prentar í label
+        newLabel(user.nafn, user.stig, count1);
+        count1++;
 
         // Hreinsar allt
         $("#formIn").trigger("reset");
     });
+
+    // Klára leikinn og finna ut í hvaða sæti hver lenti í.
+    $("#btnDone").click(function() {
+        users.sort((a, b) => b.stig - a.stig);
+        len = Object.keys(users).length;
+        var j = 0;
+        var count2 = 1;
+        while (j != len) {
+            $("#labelScore" + count2).empty().append(count2 + " " + users[j].nafn + " " + users[j].stig);
+            j++;
+            count2++;
+        };
+    });
+
+    // Bætir nafni og stigum við label
+    function newLabel(nafn, stig, count) {
+        $("#labelScore" + count).append(" " + nafn + " " + stig);
+    };
+
 });
-
-
-
-// function places(p1, p2) {
-//   return p1 * p2;   // The function returns the product of p1 and p2
-// }
