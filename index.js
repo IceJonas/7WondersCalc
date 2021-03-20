@@ -31,7 +31,7 @@ $(document).ready(function() {
         var j = 0;
         var count2 = 1;
         while (j != len) {
-            $("#labelScore" + count2).empty().append(count2 + " " + users[j].nafn + " " + users[j].stig);
+            $("#labelScore" + count2).empty().append(users[j].nafn + " " + "<span class='badge badge-secondary'>" + users[j].stig + "</span>");
             j++;
             count2++;
         };
@@ -39,7 +39,7 @@ $(document).ready(function() {
 
     // Bætir nafni og stigum við label
     function newLabel(nafn, stig, count) {
-        $("#labelScore" + count).append(" " + nafn + " " + stig);
+        $("#labelScore" + count).append(nafn + " " + "<span class='badge badge-secondary'>" + stig + "</span>");
     };
 
 });
