@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>7 Wonders Calc</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header-title">
+        <h1>7 Wonders Reiknivél</h1>
+        <p>Max 7 geta spilað.</p>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="formIn">
+                            <div class="mb-3">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" id="nameIn" placeholder="Name">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Military Conflict</label>
+                                <input type="number" class="form-control" id="numIn1" placeholder="Military">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Tresury Content</label>
+                                <input type="number" class="form-control" id="numIn2" placeholder="Tresury">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Wonders</label>
+                                <input type="number" class="form-control" id="numIn3" placeholder="Wonders">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Civilian Structures</label>
+                                <input type="number" class="form-control" id="numIn4" placeholder="Civilian">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Scientific Structures</label>
+                                <input type="number" class="form-control" id="numIn5" placeholder="Scientific">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Sets Of Identical Symbols</label>
+                                <input type="number" class="form-control" id="numIn6" placeholder="Symbols">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Commercial Structures</label>
+                                <input type="number" class="form-control" id="numIn7" placeholder="Commercial">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Guilds</label>
+                                <input type="number" class="form-control" id="numIn8" placeholder="Guilds">
+                            </div>
+                            <button class="btn btn-primary" id="btnAdd" type="button">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <label id="testLabel">1.</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>
