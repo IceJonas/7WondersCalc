@@ -6,6 +6,7 @@ $(document).ready(function() {
         var tempArr = [$("#inpNum1").val(), $("#inpNum2").val(), $("#inpNum3").val(), $("#inpNum4").val(), $("#inpNum5").val(), $("#inpNum6").val(), $("#inpNum7").val(), $("#inpNum8").val()];
         var name = $("#inpName").val();
         var temp = 0;
+        console.log(tempArr);
         for (var i = 0; i < tempArr.length; i++) {
             temp = temp + Number(tempArr[i]);
         }
