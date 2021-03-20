@@ -28,6 +28,9 @@ $(document).ready(function() {
     $("#btnRemove").click(function() {
         tempNum = countAdd - 1;
         $("#labelScore" + tempNum).empty();
+        console.log(users);
+        users.pop();
+        console.log(users);
     });
 
     // Sortera allt
